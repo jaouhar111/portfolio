@@ -1,0 +1,37 @@
+<!-- project-list.component.html -->
+<section class="projects  p-8">
+    <ul class="flex flex-wrap mb-6 space-x-4">
+      @for (category of categories; track category) {
+        <li class="filter-item mb-2">
+          <button
+            (click)="filterProjects(category)"
+            [class]="selectedCategory === category ? 'bg-yellow-500 text-gray-900' : 'bg-[#282829] text-white hover:bg-gray-700'"
+            class="px-4 py-2 rounded-full transition-all duration-300 ease-in-out"
+          >
+            {{ category }}
+          </button>
+        </li>
+      }
+    </ul>
+  
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      @for (project of filteredProjects; track project.id) {
+        <li class="project-item">
+          <a href="#" class="block group">
+            <div class="relative w-full h-[200px] rounded-[16px] overflow-hidden mb-4 transition duration-300 transform group-hover:scale-105 shadow-lg">
+              <img [src]="project.image" [alt]="project.title" class="w-full h-full object-cover transition-transform duration-500" />
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <span class="text-white text-lg font-bold">View Project</span>
+              </div>
+            </div>
+            <h3 class="text-white text-lg font-semibold capitalize group-hover:text-yellow-500 transition-colors duration-300">{{ project.title }}</h3>
+            <p class="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">{{ project.category }}</p>
+          </a>
+        </li>
+      }
+    </ul>
+  </section>
+  
+  @if (filteredProjects.length === 0) {
+    <p class="text-white text-center mt-8">No projects found for the selected category.</p>
+  }

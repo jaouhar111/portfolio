@@ -1,0 +1,24 @@
+<div class="text-white space-y-4 mb-8">
+<p>Je suis El Mehdi Jaouhar, un Ingénieur Full Stack de Fès, au Maroc, spécialisé dans le développement web avec une expertise en .NET et Angular. Je transforme des défis techniques complexes en applications web intuitives, efficaces et conviviales.</p>
+<p>Ma passion réside dans la création de sites web qui sont non seulement fonctionnels, mais aussi visuellement attrayants et faciles à naviguer. J'allie mon expertise technique à un œil aiguisé pour le design afin de garantir que chaque projet sur lequel je travaille soit à la fois robuste et engageant.</p>
+<p>Je m'engage à fournir des solutions web évolutives et de haute qualité qui stimulent la croissance des entreprises et améliorent la satisfaction des utilisateurs. Collaborons pour donner vie à votre vision numérique !</p>
+</div>
+<section class=" text-white py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-12 ">What I'm Doing</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        @for (service of services; track service.title) {
+          <div class="bg-[#282829] rounded-lg p-8 transition-transform duration-300 hover:-translate-y-2">
+            <div class="flex items-center gap-8">
+                <i [ngClass]="service.icon"></i>
+            <div>
+                <h3 class="text-xl font-semibold mb-2">{{ service.title }}</h3>
+                <p class="text-gray-400">{{ service.description }}</p>
+            </div>
+            
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>

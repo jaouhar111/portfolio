@@ -1,0 +1,63 @@
+<!-- app.component.html -->
+<div class="min-h-screen  text-white">
+  <!-- Navigation for larger screens -->
+  <nav class="hidden lg:flex justify-end ">
+    <ul class="flex space-x-6 bg-[#282829] border border-stone-500 rounded-tr-2xl rounded-bl-2xl px-6 py-4">
+      @for (tab of tabs; track tab.id) {
+        <li>
+          <a 
+            href="javascript:void(0)" 
+            (click)="setActiveTab(tab.id)" 
+            [ngClass]="activeTab === tab.id ? 'text-yellow-500' : 'text-gray-400 hover:text-white'" 
+            class="transition duration-300 font-semibold"
+          >
+            {{ tab.name }}
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="p-6 mb-20 lg:mb-0">
+    <h1 class="text-4xl text-white font-semibold mb-4">{{ activeTabTitle }}</h1>
+    <div class="w-14 h-1 bg-yellow-500 mb-8"></div>
+
+    @switch (activeTab) {
+      @case ('about') {
+        <app-about />
+      }
+      @case ('resume') {
+        <app-resumer />
+      }
+      @case ('portfolio') {
+        <app-portfolio />
+      }
+      @case ('blog') {
+        <app-blog />
+      }
+      @case ('contact') {
+        <app-contact />
+      }
+    }
+  </main>
+
+  <!-- Bottom Navigation for small and medium screens -->
+  <nav class="lg:hidden fixed bottom-0 left-0 right-0 bg-[#282829] border-t border-stone-700 rounded-t-xl shadow-lg">
+    <ul class="flex justify-around items-center h-16">
+      @for (tab of tabs; track tab.id) {
+        <li>
+          <a 
+            href="javascript:void(0)" 
+            (click)="setActiveTab(tab.id)" 
+            [ngClass]="activeTab === tab.id ? 'text-yellow-500' : 'text-gray-400 hover:text-white'" 
+            class="transition duration-300 font-semibold text-sm flex flex-col items-center pt-1"
+          >
+            
+            <span>{{ tab.name }}</span>
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
+</div>

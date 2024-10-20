@@ -1,0 +1,38 @@
+/* project-list.component.css */
+
+@keyframes fadeInOut {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .project-item {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .project-item:nth-child(odd) {
+    animation-delay: 1s;
+  }
+  
+  .project-item:nth-child(even) {
+    animation-delay: 2s;
+  }
+  
+  .project-item {
+    animation: fadeInOut 300ms ease-out;
+  }
+  
+  .project-item.ng-leave {
+    animation: fadeInOut 300ms ease-in reverse;
+  }
