@@ -1,53 +1,42 @@
-<aside class="bg-[#1E1E1F] p-4 sm:p-6 border border-stone-500 rounded-2xl text-white w-full  mx-auto mb-4 transition-all duration-300 ease-in-out overflow-hidden"
-[ngClass]="{'max-h-20': !isExpanded && isMobile, 'max-h-[1000px]': isExpanded || !isMobile}">
-<div class="flex items-center justify-between cursor-pointer sm:cursor-default" (click)="toggleExpand()">
-<div class="flex items-center space-x-3">
-<img [src]="contact.image" alt="Profile Picture" class="rounded-lg w-12 h-12 sm:w-24 sm:h-24">
-<div>
- <h2 class="text-lg sm:text-2xl font-bold">{{contact.name}}</h2>
- <p class="text-sm text-gray-300 bg-[#282829] inline-block py-1 px-2 rounded-lg">
-   {{contact.profession}}
- </p>
-</div>
-</div>
-<i class="fas fa-chevron-down text-yellow-500 sm:hidden transition-transform duration-300"
-[ngClass]="{'rotate-180': isExpanded}"></i>
-</div>
+<aside class="w-[23rem] bg-gray-900 text-white h-screen fixed left-0 top-0 overflow-y-auto" [ngClass]="{'max-h-20': !isExpanded && isMobile, 'max-h-[1000px]': isExpanded || !isMobile}">
+  <div class="flex flex-col items-center p-8">
+    <img
+      [src]="contact.image"
+      alt={contactInfo.name}
+      class="w-40 h-40 rounded-full object-cover border-4 border-blue-500 mb-4"
+    />
+    <h2 class="text-2xl font-bold mb-1">{{contact.name}}</h2>
+    <p class="text-blue-400 mb-6">{{contact.profession}}</p>
 
-<div [ngClass]="{'hidden sm:block': !isExpanded && isMobile}">
-<div class="my-4 sm:my-6 flex justify-center">
-<hr class="border-yellow-500 w-36 sm:w-52 rounded-xl">
-</div>
+    <div class="w-full space-y-4">
+      <div class="flex items-center gap-3">
+        <i class="fas fa-envelope text-blue-400 p-2 sm:p-3 bg-[#282829] rounded-xl text-sm sm:text-base"></i>
+        <span class="text-sm">{{contact.email}}</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <i class="fas fa-phone text-blue-400 p-2 sm:p-3 bg-[#282829] rounded-xl text-sm sm:text-base"></i>
+        <span class="text-sm">{{contact.phone}}</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <i class="fas fa-calendar text-blue-400 p-2 sm:p-3 bg-[#282829] rounded-xl text-sm sm:text-base"></i>
+        <span class="text-sm">{{contact.birthday}}</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <i class="fas fa-map-marker-alt text-blue-400 p-2 sm:p-3 bg-[#282829] rounded-xl text-sm sm:text-base"></i>
+        <span class="text-sm">{{contact.location}}</span>
+      </div>
+    </div>
 
-<div class="space-y-3 sm:space-y-4">
-<div class="flex items-center space-x-3 sm:space-x-4">
- <i class="fas fa-envelope text-yellow-500 p-2 sm:p-3 bg-[#282829] rounded-xl text-sm sm:text-base"></i>
- <span class="text-sm sm:text-base break-all">{{contact.email}}</span>
-</div>
-<div class="flex items-center space-x-3 sm:space-x-4">
- <i class="fas fa-phone text-yellow-500 p-2 sm:p-3 bg-[#282829] rounded-xl text-sm sm:text-base"></i>
- <span class="text-sm sm:text-base">{{contact.phone}}</span>
-</div>
-<div class="flex items-center space-x-3 sm:space-x-4">
- <i class="fas fa-birthday-cake text-yellow-500 p-2 sm:p-3 bg-[#282829] rounded-xl text-sm sm:text-base"></i>
- <span class="text-sm sm:text-base">{{contact.birthday}}</span>
-</div>
-<div class="flex items-center space-x-3 sm:space-x-4">
- <i class="fas fa-map-marker-alt text-yellow-500 p-2 sm:p-3 bg-[#282829] rounded-xl text-sm sm:text-base"></i>
- <span class="text-sm sm:text-base">{{contact.location}}</span>
-</div>
-</div>
-
-<div class="mt-8 sm:mt-12 flex justify-center space-x-6">
-<a href="https://github.com/jaouhar111?tab=repositories" class="text-gray-400 hover:text-white transition-colors duration-300">
- <i class="fab fa-github text-lg sm:text-xl"></i>
-</a>
-<a href="https://www.linkedin.com/in/elmehdijaouhar/" class="text-gray-400 hover:text-white transition-colors duration-300">
- <i class="fab fa-linkedin-in text-lg sm:text-xl"></i>
-</a>
-<a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
- <i class="fab fa-instagram text-lg sm:text-xl"></i>
-</a>
-</div>
-</div>
+    <div class="flex gap-4 mt-24">
+      <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300">
+        <i class="fab fa-linkedin-in text-lg sm:text-xl"></i>
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300">
+        <i class="fab fa-linkedin-in text-lg sm:text-xl"></i>
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300">
+        <i class="fab fa-linkedin-in text-lg sm:text-xl"></i>
+      </a>
+    </div>
+  </div>
 </aside>

@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { HistoryItem } from '../../Interfaces/HistoryItem';
 import { CommonModule } from '@angular/common';
 import { Skill } from '../../Interfaces/Skill';
+import { SkillCardComponent } from "../skill-card/skill-card.component";
 
 @Component({
   selector: 'app-resumer',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SkillCardComponent],
   templateUrl: './resumer.component.html',
   styleUrl: './resumer.component.css'
 })
@@ -51,5 +52,27 @@ export class ResumerComponent {
     { name: 'Sql Server', level: 70 },
     { name: 'Angular', level: 90 },
     { name: 'WordPress', level: 70 }
+  ];
+  skillCards = [
+    {
+      icon: 'fa-solid fa-code text-2xl text-blue-500', // Tailwind-compatible icon classes
+      title: 'Frontend Development',
+      skills: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+    },
+    {
+      icon: 'fa-solid fa-database text-2xl text-purple-500',
+      title: 'Backend Development',
+      skills: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB'],
+    },
+    {
+      icon: 'fa-solid fa-globe text-2xl text-green-500',
+      title: 'DevOps & Cloud',
+      skills: ['Docker', 'AWS', 'CI/CD', 'Kubernetes'],
+    },
+    {
+      icon: 'fa-solid fa-palette text-2xl text-pink-500',
+      title: 'Design & Tools',
+      skills: ['Figma', 'Git', 'Jest', 'Webpack'],
+    },
   ];
 }

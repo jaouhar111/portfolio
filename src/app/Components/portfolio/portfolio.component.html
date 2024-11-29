@@ -5,7 +5,7 @@
         <li class="filter-item mb-2">
           <button
             (click)="filterProjects(category)"
-            [class]="selectedCategory === category ? 'bg-yellow-500 text-gray-900' : 'bg-[#282829] text-white hover:bg-gray-700'"
+            [class]="selectedCategory === category ? 'bg-blue-500 text-white' : 'bg-[#282829] text-white hover:bg-gray-700'"
             class="px-4 py-2 rounded-full transition-all duration-300 ease-in-out"
           >
             {{ category }}
@@ -24,7 +24,7 @@
                 <span class="text-white text-lg font-bold">View Project</span>
               </div>
             </div>
-            <h3 class="text-white text-lg font-semibold capitalize group-hover:text-yellow-500 transition-colors duration-300">{{ project.title }}</h3>
+            <h3 class="text-white text-lg font-semibold capitalize group-hover:text-blue-500 transition-colors duration-300">{{ project.title }}</h3>
             <p class="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">{{ project.category }}</p>
           </a>
         </li>

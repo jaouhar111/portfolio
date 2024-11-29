@@ -11,7 +11,7 @@ import { ContactInfo } from '../../Interfaces/ContactInfo';
 })
 export class SidebarComponent {
   contact: ContactInfo = {
-    image:'https://media.licdn.com/dms/image/v2/D4E03AQGq_ayowmoOlg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1726833521756?e=1732147200&v=beta&t=Ie7lWadXSF_qcX8cvJH3tTy151WdzrZTCHWh-l43DDA',
+    image:'https://media.licdn.com/dms/image/v2/D4E03AQGq_ayowmoOlg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1726833521791?e=1738195200&v=beta&t=ACE3ejILJT0YeXW7hCFXNgbbdmK1ZfnTez7nzAPXZc0',
     name: 'El Mehdi JAOUHAR',
     profession: 'Full Stack Developer',
     email: 'elmehdijaouhar@gmail.com',
