@@ -12,5 +12,75 @@
       "portfolio": "Mis Proyectos",
       "blog": "Pensamientos y Escritos",
       "contact": "Contáctame"
+    },
+    "description": {
+      "aboutMe": "Soy un Desarrollador Full Stack apasionado con amplia experiencia en la creación de aplicaciones web modernas. Mi viaje en el desarrollo de software comenzó con una profunda curiosidad sobre cómo funcionan las cosas en la web, y esa curiosidad se ha transformado en una carrera profesional donde ayudo a las empresas a crear soluciones digitales impactantes. Con una sólida base en tecnologías frontend y backend, me especializo en crear aplicaciones intuitivas y fáciles de usar que resuelven problemas del mundo real. Estoy en constante aprendizaje y me mantengo actualizado con las últimas tecnologías y mejores prácticas en desarrollo web."
+    },
+    
+      "skillCards": [
+        {
+          "title": "Código limpio",
+          "skills": "Escribir código mantenible y escalable"
+        },
+        {
+          "title": "Apasionado",
+          "skills": "Dedicado a crear las mejores soluciones"
+        },
+        {
+          "title": "Responsivo",
+          "skills": "Diseños que funcionan en todos los dispositivos"
+        },
+        {
+          "title": "Dedicado",
+          "skills": "Comprometido con el aprendizaje continuo"
+        }
+      ],
+      
+     
+        "education": {
+          "title": "Educación",
+          "ensaf_title": "Escuela Nacional de Ciencias Aplicadas de Fez",
+          "ensaf_period": "2022 — 2024",
+          "ensaf_description": "El programa forma en aspectos técnicos y de gestión del desarrollo de software. Cubre el desarrollo full stack, incluidas tecnologías de front-end y back-end, así como gestión de proyectos y liderazgo. Los graduados están preparados para roles como Desarrollador Full Stack, Ingeniero de Software o Responsable Técnico en diversos sectores, desde startups hasta grandes empresas.",
+          "faculty_title": "Facultad de Ciencias de Fez",
+          "faculty_period": "2020 — 2021",
+          "faculty_description": "El programa combina desarrollo de software y creación de contenido multimedia. Cubre programación, diseño de software, gestión de proyectos y desarrollo de interfaces multimedia (videojuegos, aplicaciones interactivas). Los estudiantes dominan diversos lenguajes de programación y herramientas de gestión de proyectos multimedia.",
+          "ista_title": "ISTA HAY AL ADARISSA de Fez",
+          "ista_period": "2016 — 2018",
+          "ista_description": "El programa abarca habilidades en programación, gestión de proyectos y diseño de soluciones informáticas. Los graduados están preparados para trabajar en diversos sectores, implementando tecnologías innovadoras para satisfacer las necesidades empresariales."
+        },
+    
+      
+        
+          "experience": {
+            "title": "Experiencia",
+            "atrebo_title": "Atrebo Tree",
+            "atrebo_period": "2024 — Presente",
+            "atrebo_description": "Desarrolla, modifica y prueba el código de sitios web y interfaces de aplicaciones. Analizo la calidad, la seguridad y la experiencia del usuario, mientras aseguro el mantenimiento y la revisión de los sitios. Participo en el diseño de sitios y evalúo software interactivo.",
+            "cnexia_title": "Cnexia",
+            "cnexia_period": "2021 — 2024",
+            "cnexia_description": "Responde a las solicitudes de los clientes, gestiona quejas, reembolsos y pagos. Tomo pedidos, actualizo cuentas y promociono servicios. Informo a los clientes sobre productos, tarifas y políticas."
+          },
+        
+        
+      "skills": {
+        "section_title": "Habilidades Técnicas",
+    "frontend": {
+      "title": "Desarrollo Frontend",
+      "skills": ["React", "TypeScript", "Tailwind CSS", "Next.js"]
+    },
+    "backend": {
+      "title": "Desarrollo Backend",
+      "skills": ["Node.js", "Python", "PostgreSQL", "MongoDB"]
+    },
+    "devops": {
+      "title": "DevOps y Nube",
+      "skills": ["Docker", "AWS", "CI/CD", "Kubernetes"]
+    },
+    "design": {
+      "title": "Diseño y Herramientas",
+      "skills": ["Figma", "Git", "Jest", "Webpack"]
     }
   }
+      }
+      

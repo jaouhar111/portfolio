@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { ContactInfo } from '../../Interfaces/ContactInfo';
 
 @Component({
@@ -19,37 +19,14 @@ export class SidebarComponent {
     birthday: 'June 18, 1992',
     location: 'Rue Abderrahman Majdoub Hay Tarik 1, Fes, Maroc',
     socialLinks: {
-      facebook: 'https://facebook.com',
+      github: 'https://facebook.com',
       twitter: 'https://twitter.com',
       instagram: 'https://instagram.com',
     },
   };
-  isSidebarActive = false;
-  isExpanded = false;
-  isMobile = false;
+  isSidebarHidden = true; // Initially hidden on mobile
+
   toggleSidebar() {
-    this.isSidebarActive = !this.isSidebarActive;
-  }
-  toggleExpand(): void {
-    if (this.isMobile) {
-      this.isExpanded = !this.isExpanded;
-    }
-  }
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    this.checkScreenSize();
-  }
-
-  ngOnInit() {
-    this.checkScreenSize();
-  }
-
-  checkScreenSize() {
-    this.isMobile = window.innerWidth < 640; // Tailwind's sm breakpoint
-    if (!this.isMobile) {
-      this.isExpanded = true;
-    } else {
-      this.isExpanded = false; // Collapse by default on mobile
-    }
+    this.isSidebarHidden = !this.isSidebarHidden;
   }
 }

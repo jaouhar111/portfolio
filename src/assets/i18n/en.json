@@ -12,8 +12,83 @@
       "portfolio": "My Projects",
       "blog": "Thoughts & Writings",
       "contact": "Get in Touch"
+    },
+
+    "description": {
+    "aboutMe": "I am a passionate Full Stack Developer with extensive experience in building modern web applications. My journey in software development started with a deep curiosity about how things work on the web, and that curiosity has evolved into a professional career where I help businesses create impactful digital solutions. With a strong foundation in both frontend and backend technologies, I specialize in creating seamless, user-friendly applications that solve real-world problems. I'm constantly learning and staying up-to-date with the latest technologies and best practices in web development."
+    },
+    
+      "skillCards": [
+        {
+          "title": "Clean Code",
+          "skills": "Writing maintainable and scalable code"
+        },
+        {
+          "title": "Passionate",
+          "skills": "Dedicated to creating the best solutions"
+        },
+        {
+          "title": "Responsive",
+          "skills": "Designs that work on all devices"
+        },
+        {
+          "title": "Dedicated",
+          "skills": "Committed to continuous learning"
+        }
+      ],
+    
+      
+      
+        "education": {
+          "title": "Education",
+          "ensaf_title": "National School of Applied Sciences of Fez",
+          "ensaf_period": "2022 — 2024",
+          "ensaf_description": "The program trains students in both technical and managerial aspects of software development. It covers full-stack development, including front-end and back-end technologies, as well as project management and leadership. Graduates are prepared for roles such as Full Stack Developer, Software Engineer, or Technical Lead, in various sectors, from startups to large enterprises.",
+          "faculty_title": "Faculty of Sciences of Fez",
+          "faculty_period": "2020 — 2021",
+          "faculty_description": "The program combines software development and multimedia content creation. It covers programming, software design, project management, and the development of multimedia interfaces (video games, interactive applications). Students master various programming languages and multimedia project management tools.",
+          "ista_title": "ISTA HAY AL ADARISSA of Fez",
+          "ista_period": "2016 — 2018",
+          "ista_description": "The program covers skills in programming, project management, and designing IT solutions. Graduates are prepared to work in diverse sectors, implementing innovative technologies to meet business needs."
+        },
+      
+      
+       "experience": {
+    "title": "Experience",
+    "atrebo_title": "Atrebo Tree",
+    "atrebo_period": "2024 — Present",
+    "atrebo_description": "Develops, modifies, and tests the code of websites and application interfaces. I analyze quality, security, and user experience while ensuring maintenance and site revisions. I participate in the design of sites and evaluate interactive software.",
+    "cnexia_title": "Cnexia",
+    "cnexia_period": "2021 — 2024",
+    "cnexia_description": "Responds to customer requests, handles complaints, refunds, and payments. I take orders, update accounts, and promote services. I inform customers about products, rates, and policies."
+  },
+  "skills": {
+    "section_title": "Technical Skills",
+    "frontend": {
+      "title": "Frontend Development",
+      "skills": ["React", "TypeScript", "Tailwind CSS", "Next.js"]
+    },
+    "backend": {
+      "title": "Backend Development",
+      "skills": ["Node.js", "Python", "PostgreSQL", "MongoDB"]
+    },
+    "devops": {
+      "title": "DevOps & Cloud",
+      "skills": ["Docker", "AWS", "CI/CD", "Kubernetes"]
+    },
+    "design": {
+      "title": "Design & Tools",
+      "skills": ["Figma", "Git", "Jest", "Webpack"]
     }
   }
+      }
+      
+    
+ 
+   
+     
+    
+ 
   
 
   

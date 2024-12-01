@@ -12,5 +12,72 @@
       "portfolio": "Mes Projets",
       "blog": "Réflexions et Écrits",
       "contact": "Me Contacter"
+    },
+    "description": {
+    "aboutMe": "Je suis un développeur Full Stack passionné avec une vaste expérience dans la création d'applications web modernes. Mon parcours dans le développement logiciel a commencé par une profonde curiosité pour comprendre comment fonctionne le web, et cette curiosité s'est transformée en une carrière professionnelle où j'aide les entreprises à créer des solutions numériques percutantes. Avec une solide maîtrise des technologies frontend et backend, je me spécialise dans la création d'applications fluides et conviviales qui résolvent des problèmes du monde réel. J'apprends constamment et je reste à jour avec les dernières technologies et les meilleures pratiques du développement web."
+  },
+  
+    "skillCards": [
+      {
+        "title": "Code propre",
+        "skills": "Écriture de code maintenable et évolutif"
+      },
+      {
+        "title": "Passionné",
+        "skills": "Dédié à créer les meilleures solutions"
+      },
+      {
+        "title": "Responsive",
+        "skills": "Des designs adaptés à tous les appareils"
+      },
+      {
+        "title": "Dévoué",
+        "skills": "Engagé dans un apprentissage continu"
+      }
+    ],
+   
+   
+      "education": {
+        "title": "Éducation",
+        "ensaf_title": "École Nationale des Sciences Appliquées de Fès",
+        "ensaf_period": "2022 — 2024",
+        "ensaf_description": "Le programme forme aux aspects techniques et managériaux du développement logiciel. Il couvre le développement full stack, incluant les technologies front-end et back-end, ainsi que la gestion de projet et le leadership. Les diplômés sont préparés à des rôles tels que Développeur Full Stack, Ingénieur Logiciel ou Responsable Technique, dans divers secteurs, des startups aux grandes entreprises.",
+        "faculty_title": "Faculté des Sciences de Fès",
+        "faculty_period": "2020 — 2021",
+        "faculty_description": "Le programme allie développement logiciel et création de contenus multimédias. Il couvre la programmation, la conception logicielle, la gestion de projet et le développement d'interfaces multimédias (jeux vidéo, applications interactives). Les étudiants maîtrisent divers langages de programmation et outils de gestion de projets multimédias.",
+        "ista_title": "ISTA HAY AL ADARISSA de Fès",
+        "ista_period": "2016 — 2018",
+        "ista_description": "Le programme couvre les compétences en programmation, gestion de projets et conception de solutions informatiques. Les diplômés sont préparés à travailler dans divers secteurs, en mettant en œuvre des technologies innovantes pour répondre aux besoins des entreprises."
+      
+     },
+    
+      "experience": {
+    "title": "Expérience",
+    "atrebo_title": "Atrebo Tree",
+    "atrebo_period": "2024 — Présent",
+    "atrebo_description": "Développe, modifie et teste le code des sites Web et des interfaces d'applications. J'analyse la qualité, la sécurité et l'expérience utilisateur, tout en assurant la maintenance et la révision des sites. Je participe à la conception des sites et évalue des logiciels interactifs.",
+    "cnexia_title": "Cnexia",
+    "cnexia_period": "2021 — 2024",
+    "cnexia_description": "Réponds aux demandes des clients, traite les plaintes, remboursements et paiements. Je prends les commandes, mets à jour les comptes et promouvois les services. J'informe les clients sur les produits, tarifs et politiques."
+  },
+     "skills": {
+      "section_title": "Compétences Techniques",
+    "frontend": {
+      "title": "Développement Frontend",
+      "skills": ["React", "TypeScript", "Tailwind CSS", "Next.js"]
+    },
+    "backend": {
+      "title": "Développement Backend",
+      "skills": ["Node.js", "Python", "PostgreSQL", "MongoDB"]
+    },
+    "devops": {
+      "title": "DevOps et Cloud",
+      "skills": ["Docker", "AWS", "CI/CD", "Kubernetes"]
+    },
+    "design": {
+      "title": "Conception et Outils",
+      "skills": ["Figma", "Git", "Jest", "Webpack"]
     }
   }
+    }
+    

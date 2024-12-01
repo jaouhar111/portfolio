@@ -7,8 +7,9 @@ export interface ContactInfo {
   birthday: string;
   location: string;
   socialLinks: {
-    facebook: string;
+    github: string;
     twitter: string;
     instagram: string;
+    
   };
 }
