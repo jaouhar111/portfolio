@@ -10,21 +10,67 @@
     </iframe>
 </div>
 
-<h2 class="text-3xl font-bold mt-8 text-white">My Skills</h2>
 
-    <div class="py-8 lg:py-8 px-8 ">
+<!-- contact.component.html -->
+
+<section id="contact-section" class="py-32  text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-5xl font-bold text-center mb-20" [@fadeInUp] *ngIf="isInView">
+        <span class="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+          Get In Touch
+        </span>
+      </h2>
+      
+      <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12" [@fadeInUp] *ngIf="isInView">
+        <div>
+          <h3 class="text-2xl font-semibold mb-8 text-blue-400">Contact Information</h3>
+          <div class="space-y-6">
+            <div *ngFor="let info of contactInfo" class="flex items-start space-x-4">
+              <div class="p-2 bg-blue-500/10 rounded-lg text-blue-400">
+                <i [class]="info.icon" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-semibold text-blue-400">{{ info.title }}</h4>
+                <p class="text-gray-400">{{ info.content }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
         
-        <form action="#" class="space-y-8">
-            <div class="flex justify-between gap-4">
-                <input type="text" id="full-name" class="shadow-sm border border-gray-600 text-white text-sm rounded-lg w-full p-4 bg-[#1E1E1F] outline-none transition duration-300 focus:bg-transparent focus:outline-yellow-500" placeholder="Full name" required>
-                <input type="email" id="email" class="shadow-sm border border-gray-600 text-white text-sm rounded-lg w-full p-4 bg-[#1E1E1F] outline-none transition duration-300 focus:bg-transparent focus:outline-yellow-500" placeholder="Email address" required>
-            </div>
-            
-            <div class="sm:col-span-2">
-                <textarea id="message" rows="10" class="p-4 w-full text-sm text-white bg-[#1E1E1F] outline-none rounded-lg border border-gray-600 transition duration-300 focus:bg-transparent focus:outline-yellow-500" placeholder="Leave a comment..."></textarea>
-            </div>
-            
-            <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-yellow-500 border border-gray-600 rounded-lg bg-transparent">Send message</button>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-6">
+          <input
+            type="text"
+            formControlName="name"
+            placeholder="Your Name"
+            class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors duration-300 text-white placeholder-gray-400"
+            [ngClass]="{'border-red-500': contactForm.get('name')?.invalid && contactForm.get('name')?.touched}"
+          />
+          
+          <input
+            type="email"
+            formControlName="email"
+            placeholder="Your Email"
+            class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors duration-300 text-white placeholder-gray-400"
+            [ngClass]="{'border-red-500': contactForm.get('email')?.invalid && contactForm.get('email')?.touched}"
+          />
+          
+          <textarea
+            formControlName="message"
+            placeholder="Your Message"
+            rows="4"
+            class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors duration-300 text-white placeholder-gray-400"
+            [ngClass]="{'border-red-500': contactForm.get('message')?.invalid && contactForm.get('message')?.touched}"
+          ></textarea>
+          
+          <button
+            type="submit"
+            [disabled]="!contactForm.valid"
+            [class]="buttonClasses"
+          >
+          <i class="fa-regular fa-paper-plane"></i>
+            <span>Send Message</span>
+          </button>
         </form>
-        
+      </div>
     </div>
+  </section>

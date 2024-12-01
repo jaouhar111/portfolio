@@ -1,44 +1,33 @@
-<div class="text-white space-y-4 mb-8">
-<p>Je suis El Mehdi Jaouhar, un Ingénieur Full Stack de Fès, au Maroc, spécialisé dans le développement web avec une expertise en .NET et Angular. Je transforme des défis techniques complexes en applications web intuitives, efficaces et conviviales.</p>
-<p>Ma passion réside dans la création de sites web qui sont non seulement fonctionnels, mais aussi visuellement attrayants et faciles à naviguer. J'allie mon expertise technique à un œil aiguisé pour le design afin de garantir que chaque projet sur lequel je travaille soit à la fois robuste et engageant.</p>
-<p>Je m'engage à fournir des solutions web évolutives et de haute qualité qui stimulent la croissance des entreprises et améliorent la satisfaction des utilisateurs. Collaborons pour donner vie à votre vision numérique !</p>
-</div>
-<section class=" text-white py-16">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold mb-12 ">What I'm Doing</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-        @for (service of services; track service.title) {
-        <div class="rounded-lg p-8 shadow-tech transition-transform duration-300 hover:-translate-y-2"
-        >
-       
-          <div class="flex items-center gap-8">
-            <i [ngClass]="service.icon" class="text-neonBlue text-3xl"></i>
-            <div>
-              <h3 class="text-2xl font-bold mb-2 text-neonBlue">{{ service.title }}</h3>
-              <p class="text-gray-400">{{ service.description }}</p>
-            </div>
-          </div>
-       
-        </div>
-      }
-      </div>
-    </div>
-  </section>
 
-  <section id="skills" class="py-32  text-white">
+<div class="prose prose-lg mb-12">
+  <p class="mb-4">
+    I am a passionate Full Stack Developer with extensive experience in building
+    modern web applications. My journey in software development started with a
+    deep curiosity about how things work on the web, and that curiosity has
+    evolved into a professional career where I help businesses create impactful
+    digital solutions.
+  </p>
+  <p>
+    With a strong foundation in both frontend and backend technologies, I
+    specialize in creating seamless, user-friendly applications that solve
+    real-world problems. I'm constantly learning and staying up-to-date with
+    the latest technologies and best practices in web development.
+  </p>
+</div>
+   <section id="skills" class="py-32  text-white">
     <div class="container mx-auto px-4">
       <h2
         class="text-5xl font-bold text-center mb-20 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
       >
       What I'm Doing
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <app-skill-card
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <app-feature-card
           *ngFor="let skill of skillCards"
           [icon]="skill.icon"
           [title]="skill.title"
           [skills]="skill.skills"
-        ></app-skill-card>
+        ></app-feature-card>
       </div>
     </div>
   </section>

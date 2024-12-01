@@ -1,63 +1,54 @@
-<!-- app.component.html -->
-<div class="min-h-screen  text-white">
+<div class="min-h-screen text-white">
+  <!-- Language Selector -->
+ <!--  <div class="absolute top-4 right-4 z-10">
+    <app-language-selector></app-language-selector>
+  </div> -->
+
   <!-- Navigation for larger screens -->
-  <nav class="hidden lg:flex justify-end ">
-    <ul class="flex space-x-6  border border-blue-500 rounded-tr-2xl rounded-bl-2xl px-6 py-4">
-      @for (tab of tabs; track tab.id) {
-        <li>
-          <a 
-            href="javascript:void(0)" 
-            (click)="setActiveTab(tab.id)" 
-            [ngClass]="activeTab === tab.id ? 'text-blue-500' : 'text-gray-400 hover:text-white'" 
-            class="transition duration-300 font-semibold"
-          >
-            {{ tab.name }}
-          </a>
-        </li>
-      }
+  <nav class="hidden lg:flex justify-end">
+    <ul class="flex space-x-6 border border-blue-500 rounded-tr-2xl items-center rounded-bl-2xl px-6 py-4">
+      <li *ngFor="let tab of tabs; trackBy: trackById">
+        <a
+          href="javascript:void(0)"
+          (click)="setActiveTab(tab.id)"
+          [ngClass]="activeTab === tab.id ? 'text-blue-500' : 'text-gray-400 hover:text-white'"
+          class="transition duration-300 font-semibold"
+        >
+          {{ tab.name }}
+        </a>
+      </li>
+      <li> <app-language-selector></app-language-selector></li>
     </ul>
   </nav>
 
   <!-- Main Content -->
   <main class="p-6 mb-20 lg:mb-0">
-    <h1 class="text-4xl text-white font-semibold mb-4">{{ activeTabTitle }}</h1>
+    <h1 class="text-4xl text-white font-semibold mb-4">{{ getActiveTabTitle() }}</h1>
     <div class="w-14 h-1 bg-blue-500 mb-8"></div>
 
-    @switch (activeTab) {
-      @case ('about') {
-        <app-about />
-      }
-      @case ('resume') {
-        <app-resumer />
-      }
-      @case ('portfolio') {
-        <app-portfolio />
-      }
-      @case ('blog') {
-        <app-blog />
-      }
-      @case ('contact') {
-        <app-contact />
-      }
-    }
+    <div [ngSwitch]="activeTab">
+      <app-about *ngSwitchCase="'about'"></app-about>
+      <app-resumer *ngSwitchCase="'resume'"></app-resumer>
+      <app-portfolio *ngSwitchCase="'portfolio'"></app-portfolio>
+      <app-blog *ngSwitchCase="'blog'"></app-blog>
+      <app-contact *ngSwitchCase="'contact'"></app-contact>
+    </div>
+   
   </main>
 
   <!-- Bottom Navigation for small and medium screens -->
   <nav class="lg:hidden fixed bottom-0 left-0 right-0 bg-[#282829] border-t border-stone-700 rounded-t-xl shadow-lg">
     <ul class="flex justify-around items-center h-16">
-      @for (tab of tabs; track tab.id) {
-        <li>
-          <a 
-            href="javascript:void(0)" 
-            (click)="setActiveTab(tab.id)" 
-            [ngClass]="activeTab === tab.id ? 'text-blue-500' : 'text-gray-400 hover:text-white'" 
-            class="transition duration-300 font-semibold text-sm flex flex-col items-center pt-1"
-          >
-            
-            <span>{{ tab.name }}</span>
-          </a>
-        </li>
-      }
+      <li *ngFor="let tab of tabs; trackBy: trackById">
+        <a
+          href="javascript:void(0)"
+          (click)="setActiveTab(tab.id)"
+          [ngClass]="activeTab === tab.id ? 'text-blue-500' : 'text-gray-400 hover:text-white'"
+          class="transition duration-300 font-semibold text-sm flex flex-col items-center pt-1"
+        >
+          <span>{{ tab.name }}</span>
+        </a>
+      </li>
     </ul>
   </nav>
 </div>

@@ -2,15 +2,19 @@ import { Component } from '@angular/core';
 import { ServiceItem } from '../../Interfaces/ServiceItem';
 import { CommonModule } from '@angular/common';
 import { SkillCardComponent } from "../skill-card/skill-card.component";
-
+import { trigger, transition, style, animate, state } from '@angular/animations';
+import { FeatureCardComponent } from "../feature-card/feature-card.component";
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, SkillCardComponent],
+  imports: [CommonModule, SkillCardComponent, FeatureCardComponent],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.css'
+  styleUrl: './about.component.css',
+  
 })
+
 export class AboutComponent {
+  inView=false
   services: ServiceItem[] = [
     {
       icon: 'fa-brands fa-angular text-blue-500 text-3xl',
@@ -36,25 +40,25 @@ export class AboutComponent {
 
   skillCards = [
     {
-      icon: 'fa-solid fa-code text-2xl', // Tailwind-compatible icon classes
-      title: 'Frontend Development',
-      skills: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+      icon: 'fa-solid fa-code text-2xl text-blue-400', // Tailwind-compatible icon classes
+      title: 'Clean Code',
+      skills: 'Writing maintainable and scalable code',
     },
     {
-      icon: 'fa-solid fa-database text-2xl',
-      title: 'Backend Development',
-      skills: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB'],
+      icon: 'fa-regular fa-heart text-2xl text-blue-400',
+      title: 'Passionate',
+      skills: 'Dedicated to creating the best solutions',
     },
     {
-      icon: 'fa-solid fa-globe text-2xl',
-      title: 'DevOps & Cloud',
-      skills: ['Docker', 'AWS', 'CI/CD', 'Kubernetes'],
+      icon: 'fa-solid fa-laptop text-2xl text-blue-400',
+      title: 'Responsive',
+      skills: 'Designs that work on all devices',
     },
     {
-      icon: 'fa-solid fa-palette text-2xl',
-      title: 'Design & Tools',
-      skills: ['Figma', 'Git', 'Jest', 'Webpack'],
+      icon: 'fa-solid fa-mug-hot text-2xl text-blue-400',
+      title: 'Dedicated',
+      skills: 'Committed to continuous learning',
     },
   ];
-
+ 
 }

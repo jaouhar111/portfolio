@@ -1,0 +1,16 @@
+{
+    "navigation": {
+      "about": "À Propos",
+      "resume": "CV",
+      "portfolio": "Portfolio", 
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "titles": {
+      "about": "À Propos de Moi",
+      "resume": "Mon Parcours Professionnel",
+      "portfolio": "Mes Projets",
+      "blog": "Réflexions et Écrits",
+      "contact": "Me Contacter"
+    }
+  }

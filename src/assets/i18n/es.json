@@ -1,0 +1,16 @@
+{
+    "navigation": {
+      "about": "Sobre Mí",
+      "resume": "Currículum",
+      "portfolio": "Portafolio", 
+      "blog": "Blog",
+      "contact": "Contacto"
+    },
+    "titles": {
+      "about": "Sobre Mí",
+      "resume": "Mi Trayectoria Profesional",
+      "portfolio": "Mis Proyectos",
+      "blog": "Pensamientos y Escritos",
+      "contact": "Contáctame"
+    }
+  }

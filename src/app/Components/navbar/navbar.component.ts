@@ -1,31 +1,62 @@
-import { Component } from '@angular/core';
-import { AboutComponent } from "../about/about.component";
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ResumerComponent } from "../resumer/resumer.component";
-import { ContactComponent } from "../contact/contact.component";
-import { PortfolioComponent } from "../portfolio/portfolio.component";
-import { BlogComponent } from "../blog/blog.component";
+import { AboutComponent } from '../about/about.component';
+import { ResumerComponent } from '../resumer/resumer.component';
+import { ContactComponent } from '../contact/contact.component';
+import { PortfolioComponent } from '../portfolio/portfolio.component';
+import { BlogComponent } from '../blog/blog.component';
 import { Tab } from '../../Interfaces/Tab';
+import { TranslocoService } from '@jsverse/transloco';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+import { LanguageSelectorComponent } from "../language-selector/language-selector.component";
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, AboutComponent, ResumerComponent, ContactComponent, PortfolioComponent, BlogComponent],
+  imports: [
+    CommonModule,
+    AboutComponent,
+    ResumerComponent,
+    ContactComponent,
+    PortfolioComponent,
+    BlogComponent,
+    LanguageSelectorComponent
+  ],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css',
+  styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit, OnDestroy {
   tabs: Tab[] = [
-    { id: 'about', name: 'About' },
-    { id: 'resume', name: 'Resume' },
-    { id: 'portfolio', name: 'Portfolio' },
-    { id: 'blog', name: 'Blog' },
-    { id: 'contact', name: 'Contact' }
+   
   ];
+  activeTab: string = 'about';
+  private destroy$ = new Subject<void>();
 
-  activeTab = 'about';
+  constructor(private translocoService: TranslocoService) {}
 
-  get activeTabTitle(): string {
+  ngOnInit(): void {
+    this.translocoService.selectTranslateObject('navigation')
+    .pipe(takeUntil(this.destroy$))
+    .subscribe({
+      next: translations => {
+        console.log('Loaded translations object:', translations);
+        this.tabs = [
+          { id: 'about', name: translations['about'] },
+          { id: 'resume', name: translations['resume'] },
+          { id: 'portfolio', name: translations['portfolio'] },
+          { id: 'blog', name: translations['blog'] },
+          { id: 'contact', name: translations['contact'] }
+        ];
+      },
+      error: err => {
+        console.error('Error loading translations:', err);
+      }
+    });
+  }
+  
+
+  getActiveTabTitle(): string {
     return this.tabs.find(tab => tab.id === this.activeTab)?.name || '';
   }
 
@@ -33,14 +64,12 @@ export class NavbarComponent {
     this.activeTab = tabId;
   }
 
-  /* getIconForTab(tabId: string): string {
-    const iconMap: { [key: string]: string } = {
-      about: 'person',
-      resume: 'description',
-      portfolio: 'work',
-      blog: 'article',
-      contact: 'mail'
-    };
-    return iconMap[tabId] || 'circle';
-  } */
+  trackById(index: number, tab: Tab): string {
+    return tab.id;
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
 }
